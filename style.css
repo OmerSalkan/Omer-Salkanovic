@@ -66,6 +66,7 @@ html {
     font-size: 3rem;
     color: #eab800;
     transition: var(--transition);
+	z-index: 99;
 }
 .fa-arrow-up:hover{
     bottom: 35px;
