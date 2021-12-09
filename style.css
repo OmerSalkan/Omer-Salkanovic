@@ -1,0 +1,1081 @@
+/*************
+Basic
+**************/
+:root{
+    --transition: 0.3s;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  .SocijalneIkone{
+      position: fixed;
+      top: 50%;
+      left: 30px;
+      transform: translate(-30% , -50%);
+  }
+  .SocijalneIkone a{
+      display: block;
+      margin-top: 15px;
+      font-size: 1.5rem;
+  }
+  .SocijalneIkoneMobile{
+      visibility: hidden;
+  }
+  .fa-facebook-f{
+    color: #1877f2;
+    transition: var(--transition);
+    
+}
+.fa-facebook-f:hover{
+
+    transition: var(--transition);
+}
+.fa-linkedin-in{
+    color:  #0a66c2;
+    transition: var(--transition);
+}
+.fa-linkedin-in:hover{
+    
+    transition: var(--transition);
+}
+.fa-google{
+    color:  #ea4335;
+    transition: var(--transition);
+}
+.fa-google:hover{
+  
+    transition: var(--transition);
+}
+
+.fa-arrow-up{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    font-size: 3rem;
+    color: #eab800;
+    transition: var(--transition);
+}
+.fa-arrow-up:hover{
+    bottom: 35px;
+    transition: var(--transition);
+}
+
+/*************
+Navigacija
+**************/
+#toggle
+{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #427ae8;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+#toggle:before
+{
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(-5px);
+  transition: 0.2s;
+}
+#toggle:after
+{
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(5px);
+  transition: 0.2s;
+}
+#toggle.active:before
+{
+  transform: translateY(0) rotate(45deg);
+}
+#toggle.active:after
+{
+  transform: translateY(0) rotate(-45deg);
+}
+#sidebar
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  left: -300px;
+  min-height: 100vh;
+  width: 300px;
+  background: #003147;
+  transition: 0.5s;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 10;
+  border-radius: 0 45px 45px 0;
+}
+
+#sidebar.active
+{
+  left: 0px;
+}
+#sidebar ul
+{
+  position: relative;
+  margin-top: 50px;
+}
+#sidebar ul li
+{
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 40px;
+}
+#sidebar ul li:hover
+{
+  background: #eab800;
+}
+#sidebar ul li a
+{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  transition: var(--transition);
+}
+#sidebar ul li a:hover{
+    letter-spacing: 5px;
+    transform: translateX(20px);
+    transition: var(--transition);
+}
+
+.navigacija article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navigacija img{
+    width: 200px;
+}
+/*************
+Tipkajući tekst
+**************/
+
+
+.omot{
+    width: 500px;
+    margin-top: 30px;
+    height: 40px;
+    box-shadow: 0 0 4px grey;
+    border-radius: 50px;
+    line-height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    
+  
+}
+#text {
+	display: inline-block;
+	color: grey;
+    font-size: 1.3rem;
+	
+}
+
+.tipkajuciTekst img{
+    width: 240px;
+   
+}
+.tipkajuciTekst{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    height: 76vh;
+
+}
+.dugmad{
+    display: flex;
+    margin-top: 25px;
+}
+
+
+.hireMe{
+    margin-right: 20px;
+    padding: 8px 20px;
+    border: none;
+    background: #34b24c;
+    color: white;
+    transition: var(--transition);
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: var(--transition) ;
+}
+.hireMe:hover{
+    box-shadow: 0 0 15px #34b24c;
+    transition: var(--transition);
+}
+.dugmad .btn{
+    margin-right: 20px;
+    padding: 8px 20px;
+    border: none;
+    background: rgb(247, 244, 244);
+    color: rgb(133, 129, 129);
+    transition: var(--transition);
+    cursor: pointer;
+}
+.dugmad .btn:hover{
+    box-shadow: 0 0 3px grey;
+    transition: var(--transition);
+   
+}
+
+.hidden{
+    display: none;
+    transition: var(--transition);
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 70%;
+    background-color: white;
+    padding: 4rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0,0,0, 0.3);
+    z-index: 10;
+    text-align: center;
+    position: fixed;
+}
+.modal img{
+    width: 80%;
+    
+}
+
+.overlay{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+    position: fixed;
+
+}
+.close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  
+/*************
+O meni
+**************/
+
+#Omeni{
+    background-image: linear-gradient( rgba(86, 86, 88, 0.8), rgba(86, 86, 88, 0.8)), url("img/pozadinskaafrika.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+#Omeni article{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+.omenislika{
+    text-align: center;
+}
+.omenislika h1{
+    font-size: 2rem;
+    color: #eeeeee;
+}
+#Omeni img{
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.omenitekst p{
+    font-size: 1.2rem;
+    color: #f3e9e9;
+    line-height: 30px;
+}
+.omenitekst{
+    margin: 50px auto;
+    width: 60%;
+}
+.omenitekst div em{
+    font-size: 1.5rem;
+    color: #f3e9e9;
+    line-height: 30px;
+    
+    
+}
+.omenitekst div{
+    margin-top: 60px;
+}
+
+/*************
+Vještine
+**************/
+
+#vjestine{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 2rem;
+    color: grey;
+    margin-bottom: 90px;
+  
+    
+}
+
+.vjestineHr{
+    width: 220px;
+    margin: -15px auto;
+    height: 20px;
+    background-color: #eab800;
+    border: none;
+}
+#vjestine .vjestineIkone {
+    margin-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    cursor: pointer;
+    
+}
+#vjestine article i{
+    font-size: 8rem;
+
+}
+
+#vjestine article p{
+    font-size: 1rem;
+}
+
+#vjestine article .html , .css , .bootstrap , .js , .wordpress , .php{
+    flex: 0 0 13%;
+    padding: 30px;
+    border-radius: 20px;
+ 
+}
+
+
+.fa-html5{
+    color: #dd4b25;
+    transition: var(--transition);
+}
+.html:hover .fa-html5{
+    color: white;
+    transition: var(--transition);
+}
+.html:hover {
+    background-color: #dd4b25;
+    transition: var(--transition);
+    color: white;
+}
+
+.html{
+    transition: var(--transition);
+}
+
+
+.fa-css3-alt{
+    color: #254bdd;
+    transition: var(--transition);
+}
+.css:hover .fa-css3-alt{
+    color: white;
+    transition: var(--transition);
+}
+.css:hover{
+    background-color: #254bdd;
+    transition: var(--transition);
+    color: white;
+}
+.css{
+    transition: var(--transition);
+}
+
+
+
+.fa-bootstrap{
+    color: #8210f5;
+    transition: var(--transition);
+}
+.bootstrap:hover .fa-bootstrap{
+    color: white;
+    transition: var(--transition);
+}
+.bootstrap:hover{
+    background-color: #8210f5;
+    transition: var(--transition);
+    color: white;
+}
+.bootstrap{
+    transition: var(--transition);
+}
+
+
+.fa-js-square{
+    color: #cfb430;
+}
+.js:hover .fa-js-square{
+    color: white;
+    transition: var(--transition);
+}
+.js:hover{
+    background-color: #cfb430;
+    transition: var(--transition);
+    color: white;
+}
+.js{
+    transition: var(--transition);
+}
+
+
+.fa-wordpress{
+    color: #32373c;
+}
+.wordpress:hover .fa-wordpress{
+    color: white;
+    transition: var(--transition);
+}
+.wordpress:hover{
+    background-color: #32373c;
+    transition: var(--transition);
+    color: white;
+}
+.wordpress{
+    transition: var(--transition);
+}
+
+
+.fa-php{
+    color: #777bb3;
+}
+.php:hover .fa-php{
+    color: white;
+    transition: var(--transition);
+}
+.php:hover{
+    background-color: #777bb3;
+    transition: var(--transition);
+    color: white;
+}
+.php{
+    transition: var(--transition);
+}
+
+.igra{
+    margin-top: 105px;
+}
+
+.igra article{
+    width: 40%;
+    margin: auto;
+   border-top: 4px solid #427ae8;
+   border-right: 4px solid #d52e30;
+   border-bottom: 4px solid #eab800;
+   border-left: 4px solid #34b24c;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px;
+   
+}
+
+.prviDio{
+    display: flex;
+    justify-content: space-between;
+}
+.prviDio button{
+    font-size: 1.3rem;
+    border:1px solid grey;
+    background-color: white;
+    padding: 5px;
+    color: grey;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.drugiDio{
+    text-align: center;
+}
+.drugiDio h1{
+    font-size: 2rem;
+}
+.broj{
+    font-size: 3rem;
+    
+    color: grey;
+  display: inline-block;
+    
+   
+}
+
+.treciDio{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+
+}
+.lijevaStrana{
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.lijevaStrana button{
+    cursor: pointer;
+    border: 1px slid grey;
+    font-size: 1.3rem;
+    padding: 4px 15px;
+    background: white;
+    color: grey;
+}
+.desnaStrana{
+    flex: 0 0 45%;
+    text-align: left;
+
+}
+.desnaStrana p{
+    margin-bottom: 8px;
+}
+.pogodi{
+    background: transparent;
+    border: 1px solid grey;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    padding: 8px;
+    border-radius: 25px;
+    width: 80px;
+    text-align: center;
+}
+.igraNaslov {
+  margin-bottom: 45px;
+ 
+}
+
+/*************
+Portfolio
+**************/
+
+
+#portfolio{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 2rem;
+    color: grey;
+    background-color: rgb(252, 249, 249);
+    
+}
+
+.portfolioHr{
+    width: 220px;
+    margin: -15px auto;
+    height: 20px;
+    background-color: #eab800;
+    border: none;
+   
+}
+#portfolio article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+#portfolio article div{
+    flex: 0 0 30%;
+    box-shadow: 0 0 7px grey;
+    padding:10px;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+#portfolio article div:hover{
+    box-shadow: 0 0 7px #eab800;
+    transition: var(--transition);
+    margin-top: -10px;
+}
+#portfolio article div img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card 
+{
+	position: relative;
+	width: 300px;
+	height: auto;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    margin-bottom: 45px;
+}
+.i{
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	width: 150px;
+	height: 150px;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+    
+}
+.i::before 
+{
+	content: 'Live';
+	position: absolute;
+	width: 150%;
+	height: 40px;
+    background: #eab800;
+	transform: rotate(-45deg) translateY(-20px);
+	text-align: center;
+	line-height: 40px;
+	font-style: normal;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	box-shadow: 0 5px 10px rgba(14, 4, 4, 0.1);
+}
+.i::after 
+{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #eab800;
+	z-index: -1;
+	bottom: 0;
+	left: 0;
+	width: 10px;
+	box-shadow: 140px -140px 0 #eab800;
+}
+
+.iG{
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	width: 150px;
+	height: 150px;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+    
+}
+.iG::before 
+{
+	content: 'GitHub';
+	position: absolute;
+	width: 150%;
+	height: 40px;
+    background: #eab800;
+	transform: rotate(-45deg) translateY(-20px);
+	text-align: center;
+	line-height: 40px;
+	font-style: normal;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	box-shadow: 0 5px 10px rgba(14, 4, 4, 0.1);
+}
+.iG::after 
+{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #eab800;
+	z-index: -1;
+	bottom: 0;
+	left: 0;
+	width: 10px;
+	box-shadow: 140px -140px 0 #eab800;
+}
+
+/*************
+Kontakt
+**************/
+#kontakt{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 2rem;
+    color: grey;
+    height: 100vh;
+  
+    
+   
+    
+}
+
+.contactHr{
+    width: 300px;
+    margin: -15px auto;
+    height: 20px;
+    background-color: #eab800;
+    border: none;
+   
+}
+
+form{
+    margin-top: 150px;
+    transition: var(--transition);
+
+}
+.form-control{
+
+    width: 600px;
+    background: transparent;
+    border: none;
+   border-bottom: 2px solid #eab800;
+    color: grey;
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding: 7px;
+ 
+}
+input{
+    height: 45px;
+}
+form .submit{
+    background: #eab800;
+    border-color: transparent;
+    color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+
+}
+form .submit:hover{
+   background: #5e501d;
+   color: white;
+}
+
+/*************
+Footer
+**************/
+
+footer{
+    height: 20vh;
+    background-color: rgb(61, 57, 57);
+    color: white;
+}
+
+footer article {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+   align-items: center;
+   flex-wrap: wrap;
+}
+footer img{
+    width: 200px;
+}
+footer h3{
+    font-size: 2rem;
+    align-items: ce;
+}
+.footertekst{
+    text-align: center;
+    font-size:1.2rem ;
+}
+
+
+
+
+
+
+
+
+
+/*************
+R E S P O N S I V E 
+*******************/
+
+@media (max-width: 750px) {
+
+.SocijalneIkone{
+    visibility: hidden;
+}
+.SocijalneIkoneMobile{
+    margin-top: 50px;
+    margin-left: 15px;
+    visibility: visible;
+  }
+  .SocijalneIkoneMobile a{
+      display: block;
+      margin-top: 25px;
+      font-size: 1.8rem;
+      color: white;
+  }
+  .modal{
+      width: 100%;
+      height: auto;
+      padding: 5px;
+  }
+  .modal img{
+      width: 100%;
+  }
+  .omot{
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 5px ;
+    right: 20px;
+    font-size: 2rem;
+  }
+
+  #text {
+	display: inline-block;
+	color: grey;
+    font-size: 1.2rem;
+	
+}
+.hireMe{
+    margin: 0;
+}
+.dugmad .btn{
+    margin: 0;
+}
+
+
+/********
+O meni
+********/
+#Omeni{
+   height: auto;
+    background-attachment: local;
+}
+
+#Omeni article{
+    padding-top: 50px;
+}
+
+
+.omenislika h1{
+    font-size: 1.5rem;
+   
+}
+#Omeni img{
+    width: 150px;
+
+}
+.junior{
+    font-size: 1.3rem;
+}
+
+.omenitekst{
+    width: 100%;
+    text-align: justify;
+}
+
+
+/********
+Vjestine
+********/
+#vjestine article .html , .css , .bootstrap , .js , .wordpress , .php{
+    flex: 0 0 100%;
+    margin-top: 20px;
+}
+
+.igra article{
+    width: 100%;
+
+}
+
+
+.prviDio{
+    flex-direction: column;
+}
+.igrajponovo{
+    margin-bottom: 9px;
+    
+}
+.prviDio h5{
+    margin-bottom: 9px;
+    font-size: 1.2rem;
+}
+
+
+/***********
+Portfolio
+****************/
+
+#portfolio article div{
+    flex: 0 0 100%;
+}
+
+#portfolio h3{
+   margin-top: -55px;
+}
+
+/***********
+Kontakt
+****************/
+
+
+
+
+.form-control{
+
+    width: 100%;
+
+}
+
+
+/***********
+footer
+****************/
+footer{
+    height: auto;
+}
+
+footer article{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.imefooter{
+    margin-bottom: 10px;
+}
+
+.footertekst{
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 20px;
+    padding-bottom: 10px;
+  
+}
+
+
+
+
+}
+
+
+
+@media 
+  (min-device-width: 751px) 
+  and (max-device-width: 1280px) {
+
+    .omenitekst{
+        width: 90%;
+        text-align: justify;
+    }
+
+
+    #vjestine article .html , .css , .bootstrap , .js , .wordpress , .php{
+        flex: 0 0 40%;
+        margin-top: 20px;
+    }
+
+    .igra article{
+        width: 90%;
+    
+    }
+    
+    #portfolio article div{
+        flex: 0 0 40%;
+    }
+
+    #portfolio article{
+        justify-content: space-around;
+    }
+
+
+    footer{
+        height: auto;
+    }
+    
+    footer article{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .imefooter{
+        margin-bottom: 10px;
+    }
+    
+    .footertekst{
+        width: 100%;
+        font-size: 1rem;
+        margin-top: 20px;
+        padding-bottom: 10px;
+      
+    }
+    
+    .modal{
+        width: 100%;
+        height: auto;
+        padding: 5px;
+    }
+    .modal img{
+        width: 100%;
+    }
+   
+  
+    .close-modal {
+      position: absolute;
+      top: 5px ;
+      right: 20px;
+      font-size: 2rem;
+    }
+
+
+}
+
+
+
+
+
+
