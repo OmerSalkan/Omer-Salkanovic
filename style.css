@@ -99,7 +99,6 @@ Navigacija
   background: #233b50;
   cursor: pointer;
   display: flex;
-  border-radius: 0 0 0 30px;
   justify-content: center;
   align-items: center;
   z-index: 99;
